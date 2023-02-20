@@ -1,12 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Button from '@mui/material/Button';
-import AppleIcon from '@mui/icons-material/Apple';
+import React from "react";
+import "./App.css";
+import {ArticlePreview} from "./article/ArticlePreview";
+import {AppBar, Stack, Typography} from "@mui/material";
 
 function App() {
   return (
-    <Button variant="contained" startIcon={<AppleIcon />}>Hello World</Button>
+    <><AppBar>
+      <img src="./logo192.png" alt="D logo" width={50}/>
+      <Typography variant="h4" p={.5}>Derek's Blog</Typography>
+    
+    </AppBar><Stack spacing={2} justifyContent="center" alignItems="center">
+      <ArticlePreview title="Preview The First"/>
+    </Stack></>
   );
 }
 
